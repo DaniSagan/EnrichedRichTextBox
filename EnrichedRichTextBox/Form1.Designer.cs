@@ -28,13 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.enrichedControl1 = new EnrichedRichTextBox.EnrichedControl();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // enrichedControl1
+            // 
+            this.enrichedControl1.Location = new System.Drawing.Point(12, 12);
+            this.enrichedControl1.Name = "enrichedControl1";
+            this.enrichedControl1.Size = new System.Drawing.Size(776, 360);
+            this.enrichedControl1.TabIndex = 0;
+            this.enrichedControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.enrichedControl1_MouseDown);
+            this.enrichedControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.enrichedControl1_MouseMove);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(12, 378);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(776, 20);
+            this.textBox1.TabIndex = 1;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.enrichedControl1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private EnrichedControl enrichedControl1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
